@@ -1,0 +1,74 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="A. Presentación/7. Historia de Ejemplo" />
+
+<div class="intro">
+  <h1>Historia de Ejemplo</h1>
+  ```js
+  import type { Meta, StoryObj } from '@storybook/react';
+
+import { Button } from './Button';
+
+const meta = {
+  title: 'Atomic/Button',
+  component: Button,
+  tags: ['autodocs'],
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+} satisfies Meta<typeof Button>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Primary: Story = {
+  args: {
+    primary: true,
+    label: 'Button',
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    label: 'Button',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: 'large',
+    label: 'Button',
+  },
+};
+
+export const Small: Story = {
+  args: {
+    size: 'small',
+    label: 'Button',
+  },
+};
+```
+</div>
+
+[Anterior](?path=/docs/a-presentación-6-instalación-de-storybook--docs)
+[Siguiente](?path=/docs/a-presentación-8-add-ons-en-storybook--docs)
+
+<style>
+  {`
+  .intro {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  pre {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+`}
+</style>
